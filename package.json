@@ -1,0 +1,21 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "AS A developer who writes about tech\r I WANT a CMS-style blog site\r SO THAT I can publish articles, blog posts, and my thoughts and opinions\r ```",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deluus/tech-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deluus/tech-blog/issues"
+  },
+  "homepage": "https://github.com/deluus/tech-blog#readme"
+}
