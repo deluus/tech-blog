@@ -5,12 +5,7 @@ const router = require('express').Router();
 // GET all post
 router.get('/', (req, res) => {
     Post.findAll({
-            attributes: [
-                'id',
-                'title',
-                'content',
-                'created_at'
-            ],
+       
             include: [{
                     model: Comment,
                     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
@@ -19,10 +14,7 @@ router.get('/', (req, res) => {
                         attributes: ['username']
                     }
                 },
-                {
-                    model: User,
-                    attributes: ['username']
-                }
+         
             ]
         })
         .then(dbPostData => {
@@ -54,12 +46,7 @@ router.get('/post/:id', (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: [
-                'id',
-                'content',
-                'title',
-                'created_at'
-            ],
+      
             include: [{
                     model: Comment,
                     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
@@ -68,10 +55,7 @@ router.get('/post/:id', (req, res) => {
                         attributes: ['username']
                     }
                 },
-                {
-                    model: User,
-                    attributes: ['username']
-                }
+         
             ]
         })
         .then(dbPostData => {
@@ -97,12 +81,7 @@ router.get('/posts-comments', (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: [
-                'id',
-                'content',
-                'title',
-                'created_at'
-            ],
+        
             include: [{
                     model: Comment,
                     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
@@ -111,10 +90,7 @@ router.get('/posts-comments', (req, res) => {
                         attributes: ['username']
                     }
                 },
-                {
-                    model: User,
-                    attributes: ['username']
-                }
+             
             ]
         })
         .then(dbPostData => {
