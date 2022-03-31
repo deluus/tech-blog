@@ -11,5 +11,6 @@ const seedAll = async() => {
     await seedComments();
     process.exit(0);
 };
+console.log('seeds are here')
 
 seedAll();
