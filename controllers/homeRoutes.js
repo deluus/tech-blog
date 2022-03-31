@@ -6,16 +6,7 @@ const router = require('express').Router();
 router.get('/', (req, res) => {
     Post.findAll({
        
-            include: [{
-                    model: Comment,
-                    attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-                    include: {
-                        model: User,
-                        attributes: ['username']
-                    }
-                },
-         
-            ]
+            include: [User]
         })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
