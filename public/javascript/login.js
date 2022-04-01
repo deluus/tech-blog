@@ -29,7 +29,7 @@ function loginFormHandler(event) {
 
   if (username && password) {
     fetch('/api/users/login', {
-      method: 'post',
+      method: 'POST',
       body: JSON.stringify({
         username: username,
         password: password

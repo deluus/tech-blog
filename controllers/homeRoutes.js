@@ -21,14 +21,18 @@ router.get('/', (req, res) => {
 // GET login 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/');
+        res.redirect('/dashboard');
         return;
     }
     res.render('login');
 });
 
 router.get('/signup', (req, res) => {
-    res.render('signup');
+    if (req.session.loggedIn){
+    res.redirect('/dashboard');
+    return;
+    }
+    res.render('signup')
 });
 
 // GET posts by ID
