@@ -37,7 +37,7 @@ function loginFormHandler(event) {
       headers: { 'Content-Type': 'application/json' }
     })
     .then(function() {
-      document.location.replace("/dashboard");
+      document.location.replace("/");
     })
   }
 }

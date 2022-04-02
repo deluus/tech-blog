@@ -18,22 +18,6 @@ router.get('/', (req, res) => {
         });
 });
 
-// GET login 
-router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/dashboard');
-        return;
-    }
-    res.render('login');
-});
-
-router.get('/signup', (req, res) => {
-    if (req.session.loggedIn){
-    res.redirect('/dashboard');
-    return;
-    }
-    res.render('signup')
-});
 
 // GET posts by ID
 router.get('/post/:id', (req, res) => {
@@ -102,6 +86,24 @@ router.get('/posts-comments', (req, res) => {
             res.status(500).json(err);
         });
 });
+
+// GET login 
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/dashboard');
+        return;
+    }
+    res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn){
+    res.redirect('/dashboard');
+    return;
+    }
+    res.render('signup')
+});
+
 
 
 module.exports = router;
