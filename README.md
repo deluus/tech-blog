@@ -41,3 +41,11 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add new comments
 ```
+
+git hub link : https://github.com/deluus/tech-blog
+
+
+https://user-images.githubusercontent.com/91577221/161661060-15cdd31a-6722-4cbb-9ad4-e96cc114b90f.mp4
+
+
+
